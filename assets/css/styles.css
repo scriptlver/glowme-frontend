@@ -559,12 +559,8 @@ html {
   margin: 2px 0 0;            
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;     
   -webkit-box-orient: vertical;
 }
-
-
-
 
 .product-thumb {
   position: absolute;
