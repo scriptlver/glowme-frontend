@@ -8,6 +8,9 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
 
 :root {
   --logo-font: 'Gloock', serif;
@@ -21,6 +24,7 @@
 nav {
     background-color: white; 
     display: flex;
+    text-align: center;
     justify-content: center;
     padding: 40px;
     position: relative;
@@ -590,6 +594,7 @@ nav a:hover {
   margin: 2px 0 0;            
   overflow: hidden;
   display: -webkit-box;
+  -webkit-line-clamp: 3;     
   -webkit-box-orient: vertical;
 }
 
@@ -717,12 +722,13 @@ nav a:hover {
 .menu-mobile {
   width: 100%;
   max-width: 420px;
+  height: 100vh;
   background-color: #ffffff;
-  padding: 30px 38px;
+  padding: 30px;
+  padding-left: 38px;
+  padding-right: 38px;
   display: flex;
   flex-direction: column;
-  height: auto;
-  text-align: left;
 }
 
 /* ===============================
@@ -732,7 +738,8 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 22px;
+
+  padding-top: 22px;  
   margin-bottom: 24px;
 }
 
@@ -752,8 +759,6 @@ nav a:hover {
   color: var(--color-secundary);
   font-family: 'Lexend', sans-serif;
   letter-spacing: 2px;
-  margin-top: 2px;
-  text-align: center;
 }
 
 .menu-mobile-icons {
@@ -765,10 +770,9 @@ nav a:hover {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
 }
 
-/* ÍCONES */
+/* ÍCONES (SEARCH / CLOSE) */
 .menu-mobile-icons img {
   width: 20px;
   height: 20px;
@@ -776,10 +780,12 @@ nav a:hover {
 }
 
 .menu-mobile-close {
-  font-size: 22px;
-  font-weight: 300;
+  font-size: 22px;        /* maior */
+  font-weight: 300;       /* mais fino */
   line-height: 1;
-  padding: 6px;
+  padding: 6px;           /* mais área de clique */
+  margin-top: -2px;
+  cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.2s ease;
 }
@@ -787,29 +793,23 @@ nav a:hover {
 .menu-mobile-close:hover {
   opacity: 1;
 }
-
 /* ===============================
-   LISTA DO MENU
+   LISTA PRINCIPAL DO MENU
 ================================ */
 .menu-mobile-list {
-  display: block;
+  flex: none;
 }
 
 .menu-mobile-item {
   position: relative;
 }
 
-.menu-mobile-text {
-  padding-left: 0;
-}
-
-/* linhas divisórias full width */
 .menu-mobile-item::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -38px;
-  width: calc(100% + 76px);
+  left: -24px;
+  width: calc(100% + 48px);
   height: 1px;
   background-color: #e5e5e5;
 }
@@ -818,42 +818,35 @@ nav a:hover {
   content: "";
   position: absolute;
   bottom: 0;
-  left: -38px;
-  width: calc(100% + 76px);
+  left: -24px;
+  width: calc(100% + 48px);
   height: 1px;
   background-color: #e5e5e5;
 }
-
 .menu-mobile-item input {
   display: none;
 }
 
-/* ===============================
-   TÍTULO DO ITEM
-================================ */
+/* titulos dos itens do menu mobile */
 .menu-mobile-title {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 
-  padding: 18px 0 14px;
+  height: 56px;
+  padding: 0;
+
   font-family: 'Lexend', sans-serif;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 1.5px;
-  line-height: 1.2;
+
+  line-height: 1;      /* 🔑 MUITO IMPORTANTE */
   cursor: pointer;
 }
-
-.menu-mobile-text {
-  display: block;
-}
-
-/* ÍCONE + / x */
+/* ÍCONE + */
 .menu-mobile-icon {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1;
+  font-size: 22px;
   transition: transform 0.3s ease;
 }
 
@@ -864,16 +857,19 @@ nav a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
-  padding-top: 6px;
 }
 
 .menu-mobile-submenu a {
   display: block;
   padding: 8px 0;
-  font-size: 14px;
-  font-family: var(--nav-font);
   color: var(--color-triary);
   text-decoration: none;
+  text-align: left;
+  font-family: var(--nav-font);
+  font-size: 14px;
+}
+
+.menu-mobile-submenu a {
   opacity: 0.85;
 }
 
@@ -881,13 +877,13 @@ nav a:hover {
   opacity: 1;
 }
 
-/* submenu aberto */
+/* SUBMENU ABERTO */
 .menu-mobile-item input:checked ~ .menu-mobile-submenu {
-  max-height: 500px;
+  max-height: 400px;
   margin-bottom: 16px;
 }
 
-/* gira o + */
+/* GIRA O + */
 .menu-mobile-item input:checked
 + .menu-mobile-title
 .menu-mobile-icon {
@@ -895,34 +891,18 @@ nav a:hover {
 }
 
 /* ===============================
-   LINKS FINAIS (NÃO É FOOTER FIXO)
+   FOOTER DO MENU MOBILE
 ================================ */
 .menu-mobile-footer {
-  margin-top: 16px;
   padding-top: 12px;
+  text-align: left;
 }
 
 .menu-mobile-footer a {
   display: block;
   font-size: 14px;
-  font-family: var(--nav-font);
   color: var(--color-triary);
-  opacity: 0.85;
+  font-family: var(--nav-font);
   margin-bottom: 8px;
   text-decoration: none;
-  text-align: left;
-}
-
-.menu-mobile-footer a:hover {
-  opacity: 1;
-}
-
-.menu-mobile-list,
-.menu-mobile-footer {
-  padding-left: 0;
-}
-
-.menu-mobile-submenu,
-.menu-mobile-footer {
-  width: 100%;
 }
