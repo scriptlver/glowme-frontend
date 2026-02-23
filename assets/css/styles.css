@@ -17,6 +17,7 @@ html {
   --nav-font: 'Lexend', sans-serif;
   --color-primary: #ffffff;
   --color-secundary: #D96685;
+  --color-triary: #4B4141;
 }
 
 
@@ -779,16 +780,24 @@ nav a:hover {
 }
 
 .menu-mobile-close {
-  font-weight: 550;
-  font-size: 18px;
-  margin-top: -3px;
+  font-size: 22px;        /* maior */
+  font-weight: 300;       /* mais fino */
+  line-height: 1;
+  padding: 6px;           /* mais área de clique */
+  margin-top: -2px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
 }
 
+.menu-mobile-close:hover {
+  opacity: 1;
+}
 /* ===============================
    LISTA PRINCIPAL DO MENU
 ================================ */
 .menu-mobile-list {
-  flex: 1;
+  flex: none;
 }
 
 .menu-mobile-item {
@@ -823,14 +832,18 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  height: 56px;
+  padding: 0;
+
   font-family: 'Lexend', sans-serif;
-  padding: 16px 0;
   font-size: 16px;
-  letter-spacing: 1.5px;
   font-weight: 300;
+  letter-spacing: 1.5px;
+
+  line-height: 1;      /* 🔑 MUITO IMPORTANTE */
   cursor: pointer;
 }
-
 /* ÍCONE + */
 .menu-mobile-icon {
   font-size: 22px;
@@ -844,20 +857,30 @@ nav a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
-  
 }
 
 .menu-mobile-submenu a {
   display: block;
-  padding: 6px 0;
-  font-size: 14px;
-  color: #777;
+  padding: 8px 0;
+  color: var(--color-triary);
   text-decoration: none;
+  text-align: left;
+  font-family: var(--nav-font);
+  font-size: 14px;
+}
+
+.menu-mobile-submenu a {
+  opacity: 0.85;
+}
+
+.menu-mobile-submenu a:hover {
+  opacity: 1;
 }
 
 /* SUBMENU ABERTO */
 .menu-mobile-item input:checked ~ .menu-mobile-submenu {
   max-height: 400px;
+  margin-bottom: 16px;
 }
 
 /* GIRA O + */
@@ -871,26 +894,15 @@ nav a:hover {
    FOOTER DO MENU MOBILE
 ================================ */
 .menu-mobile-footer {
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid #e5e5e5;
+  padding-top: 12px;
+  text-align: left;
 }
 
 .menu-mobile-footer a {
   display: block;
-  font-size: 13px;
-  color: #999;
+  font-size: 14px;
+  color: var(--color-triary);
+  font-family: var(--nav-font);
   margin-bottom: 8px;
   text-decoration: none;
-}
-
-/* ===============================
-   EFEITOS SUAVES (AESTHETIC)
-================================ */
-.menu-mobile-title:hover {
-  opacity: 0.8;
-}
-
-.menu-mobile-submenu a:hover {
-  opacity: 0.7;
 }
