@@ -717,29 +717,28 @@ nav a:hover {
 
 
 /* ===============================
-   MENU MOBILE
+   MENU MOBILE
 ================================ */
 .menu-mobile {
   width: 100%;
   max-width: 420px;
-  height: 100vh;
   background-color: #ffffff;
-  padding: 30px;
-  padding-left: 38px;
-  padding-right: 38px;
+  padding: 30px 38px;
   display: flex;
   flex-direction: column;
+  height: auto;
+  text-align: left;
+  box-sizing: border-box;
 }
 
 /* ===============================
-   HEADER DO MENU MOBILE
+   HEADER DO MENU MOBILE
 ================================ */
 .menu-mobile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding-top: 22px;  
+  padding-top: 22px;
   margin-bottom: 24px;
 }
 
@@ -752,6 +751,7 @@ nav a:hover {
   font-size: 28px;
   font-weight: 400;
   font-family: 'Gloock', sans-serif;
+  margin: 0;
 }
 
 .menu-mobile-slogan {
@@ -759,20 +759,23 @@ nav a:hover {
   color: var(--color-secundary);
   font-family: 'Lexend', sans-serif;
   letter-spacing: 2px;
+  margin-top: 2px;
+  text-align: center; /* Slogan centralizado como você queria */
 }
 
 .menu-mobile-icons {
   display: flex;
   gap: 18px;
+  align-items: center;
 }
 
 .menu-mobile-icons button {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
-/* ÍCONES (SEARCH / CLOSE) */
 .menu-mobile-icons img {
   width: 20px;
   height: 20px;
@@ -780,36 +783,33 @@ nav a:hover {
 }
 
 .menu-mobile-close {
-  font-size: 22px;        /* maior */
-  font-weight: 300;       /* mais fino */
+  font-size: 22px;
+  font-weight: 300;
   line-height: 1;
-  padding: 6px;           /* mais área de clique */
-  margin-top: -2px;
-  cursor: pointer;
+  padding: 6px;
   opacity: 0.7;
   transition: opacity 0.2s ease;
 }
 
-.menu-mobile-close:hover {
-  opacity: 1;
-}
 /* ===============================
-   LISTA PRINCIPAL DO MENU
+   LISTA E DIVISÓRIAS
 ================================ */
 .menu-mobile-list {
-  flex: none;
+  display: block;
+  padding-left: 0;
 }
 
 .menu-mobile-item {
   position: relative;
 }
 
+/* Linhas divisórias full width compensando o padding lateral */
 .menu-mobile-item::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -24px;
-  width: calc(100% + 48px);
+  left: -38px;
+  width: calc(100% + 76px);
   height: 1px;
   background-color: #e5e5e5;
 }
@@ -818,91 +818,93 @@ nav a:hover {
   content: "";
   position: absolute;
   bottom: 0;
-  left: -24px;
-  width: calc(100% + 48px);
+  left: -38px;
+  width: calc(100% + 76px);
   height: 1px;
   background-color: #e5e5e5;
 }
+
 .menu-mobile-item input {
   display: none;
 }
 
-/* titulos dos itens do menu mobile */
+/* ===============================
+   TÍTULO DO ITEM
+================================ */
 .menu-mobile-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  height: 56px;
-  padding: 0;
-
+  padding: 18px 0;
   font-family: 'Lexend', sans-serif;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 1.5px;
-
-  line-height: 1;      /* 🔑 MUITO IMPORTANTE */
+  line-height: 1.2;
   cursor: pointer;
+  padding-left: 0; /* Garante que o texto comece no limite esquerdo */
 }
-/* ÍCONE + */
+
 .menu-mobile-icon {
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
   transition: transform 0.3s ease;
 }
 
 /* ===============================
-   SUBMENU
+   SUBMENU (ALINHADO COM O TÍTULO)
 ================================ */
 .menu-mobile-submenu {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: all 0.4s ease;
+  padding-left: 0; /* Alinhado perfeitamente à esquerda */
+  opacity: 0;
 }
 
 .menu-mobile-submenu a {
   display: block;
   padding: 8px 0;
+  font-size: 14px;
+  font-family: var(--nav-font);
   color: var(--color-triary);
   text-decoration: none;
-  text-align: left;
-  font-family: var(--nav-font);
-  font-size: 14px;
-}
-
-.menu-mobile-submenu a {
   opacity: 0.85;
 }
 
-.menu-mobile-submenu a:hover {
+/* Submenu aberto */
+.menu-mobile-item input:checked ~ .menu-mobile-submenu {
+  max-height: 500px;
+  margin-bottom: 16px;
   opacity: 1;
 }
 
-/* SUBMENU ABERTO */
-.menu-mobile-item input:checked ~ .menu-mobile-submenu {
-  max-height: 400px;
-  margin-bottom: 16px;
-}
-
-/* GIRA O + */
-.menu-mobile-item input:checked
-+ .menu-mobile-title
-.menu-mobile-icon {
+/* Gira o + */
+.menu-mobile-item input:checked + .menu-mobile-title .menu-mobile-icon {
   transform: rotate(45deg);
 }
 
 /* ===============================
-   FOOTER DO MENU MOBILE
+   FOOTER (ALINHADO COM O TÍTULO)
 ================================ */
 .menu-mobile-footer {
+  margin-top: 16px;
   padding-top: 12px;
-  text-align: left;
+  padding-left: 0; /* Alinhado perfeitamente à esquerda */
 }
 
 .menu-mobile-footer a {
   display: block;
   font-size: 14px;
-  color: var(--color-triary);
   font-family: var(--nav-font);
-  margin-bottom: 8px;
+  color: var(--color-triary);
+  opacity: 0.85;
+  margin-bottom: 10px;
   text-decoration: none;
+  text-align: left;
+}
+
+.menu-mobile-footer a:hover {
+  opacity: 1;
 }
