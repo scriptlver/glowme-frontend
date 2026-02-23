@@ -20,41 +20,6 @@ html {
   --color-triary: #4B4141;
 }
 
-
-nav {
-    background-color: white; 
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding: 40px;
-    position: relative;
-}
-
-nav a {
-    color: #D99791;
-    text-decoration: none; 
-    margin: 0 15px;
-    font-family: 'Lexend', sans-serif;
-}    
-nav a:hover { 
-    color: #79717A; 
-}
-
-.nav-button {
-    background-color: #D99791;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-family: 'Lexend', sans-serif;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.nav-button:hover {
-    background-color: #C27B75;
-}
-
 .marca{
     margin-top: -70px;
     position: absolute;
