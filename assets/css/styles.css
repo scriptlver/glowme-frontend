@@ -681,9 +681,7 @@ html {
 }
 
 
-/* ===============================
-   MENU MOBILE
-================================ */
+/* MENU (MOBILE) */
 .menu-mobile {
   width: 100%;
   max-width: 420px;
@@ -696,9 +694,6 @@ html {
   box-sizing: border-box;
 }
 
-/* ===============================
-   HEADER DO MENU MOBILE
-================================ */
 .menu-mobile-header {
   display: flex;
   align-items: center;
@@ -725,7 +720,7 @@ html {
   font-family: 'Lexend', sans-serif;
   letter-spacing: 2px;
   margin-top: 2px;
-  text-align: center; /* Slogan centralizado como você queria */
+  text-align: center; 
 }
 
 .menu-mobile-icons {
@@ -756,9 +751,6 @@ html {
   transition: opacity 0.2s ease;
 }
 
-/* ===============================
-   LISTA E DIVISÓRIAS
-================================ */
 .menu-mobile-list {
   display: block;
   padding-left: 0;
@@ -768,7 +760,6 @@ html {
   position: relative;
 }
 
-/* Linhas divisórias full width compensando o padding lateral */
 .menu-mobile-item::before {
   content: "";
   position: absolute;
@@ -793,9 +784,7 @@ html {
   display: none;
 }
 
-/* ===============================
-   TÍTULO DO ITEM
-================================ */
+/* TÍTULO DO ITEM */
 .menu-mobile-title {
   display: flex;
   justify-content: space-between;
@@ -807,24 +796,23 @@ html {
   letter-spacing: 1.5px;
   line-height: 1.2;
   cursor: pointer;
-  padding-left: 0; /* Garante que o texto comece no limite esquerdo */
+  padding-left: 0;
 }
 
 .menu-mobile-icon {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 18px;       
+  font-weight: 200;     
   line-height: 1;
   transition: transform 0.3s ease;
+  color: var(--color-triary);  
+  display: inline-block;
 }
 
-/* ===============================
-   SUBMENU (ALINHADO COM O TÍTULO)
-================================ */
 .menu-mobile-submenu {
   max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
-  padding-left: 0; /* Alinhado perfeitamente à esquerda */
+  padding-left: 0; 
   opacity: 0;
 }
 
@@ -838,25 +826,20 @@ html {
   opacity: 0.85;
 }
 
-/* Submenu aberto */
 .menu-mobile-item input:checked ~ .menu-mobile-submenu {
   max-height: 500px;
   margin-bottom: 16px;
   opacity: 1;
 }
 
-/* Gira o + */
 .menu-mobile-item input:checked + .menu-mobile-title .menu-mobile-icon {
   transform: rotate(45deg);
 }
 
-/* ===============================
-   FOOTER (ALINHADO COM O TÍTULO)
-================================ */
 .menu-mobile-footer {
   margin-top: 16px;
   padding-top: 12px;
-  padding-left: 0; /* Alinhado perfeitamente à esquerda */
+  padding-left: 0; 
 }
 
 .menu-mobile-footer a {
