@@ -875,7 +875,7 @@ html {
 .register-header {
   position: relative;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 .register-menu-icon {
@@ -913,7 +913,7 @@ html {
 .register-form {
   display: flex;
   flex-direction: column;
-  max-width: 280px;
+  max-width: 260px;
   margin: 0 auto;
 
 }
@@ -937,15 +937,13 @@ html {
   border: 1px solid #b4b3b3;
   background: transparent;
   font-size: 14px;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .register-input:focus {
   border-color: #000;
   outline: none;
 }
-
-/* ===== TERMS ===== */
 
 .register-terms {
   display: flex;
@@ -960,7 +958,7 @@ html {
   cursor: pointer;
 }
 
-/* ===== BUTTON ===== */
+/* botão (criar conta)*/
 
 .register-button {
   padding: 12px;
@@ -969,6 +967,7 @@ html {
   font-size: 17px;
   cursor: pointer;
   transition: 0.3s;
+  border: 0.5px solid #c4b7b7;
   font-family: "Cormorant Garamond", serif;
 }
 
