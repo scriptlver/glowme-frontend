@@ -2,6 +2,8 @@
 @import url('https://fonts.cdnfonts.com/css/manttulcuy');
 @import url('https://fonts.cdnfonts.com/css/gloock');
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap");
+
 
 * {
   margin: 0;
@@ -901,8 +903,8 @@ html {
 }
 
 .register-title {
-  font-family: 'Lexend', sans-serif;
-  font-size: 28px;
+  font-family: 'Kapakana', sans-serif;
+  font-size: 38px;
   text-align: center;
   margin-bottom: 30px;
   font-weight: 500;
@@ -923,7 +925,7 @@ html {
 }
 
 .register-label {
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 6px;
   font-family: "Cormorant Garamond", serif;
   color: var(--color-triary);
