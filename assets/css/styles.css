@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&display=swap");
 @import url('https://fonts.cdnfonts.com/css/manttulcuy');
 @import url('https://fonts.cdnfonts.com/css/gloock');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
 
 * {
   margin: 0;
@@ -861,15 +862,13 @@ html {
   opacity: 1;
 }
 
-/* ===== CONTAINER ===== */
+/* criar conta */
 
 .register-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 30px 25px;
 }
-
-/* ===== HEADER ===== */
 
 .register-header {
   position: relative;
@@ -885,52 +884,58 @@ html {
   cursor: pointer;
 }
 
-/* ===== LOGO ===== */
-
 .register-logo {
   font-family: 'Gloock', serif;
   font-size: 28px;
   letter-spacing: 2px;
+  font-weight: 400;
 }
 
-.register-logo-sub {
+.register-logo-slogan{
   display: block;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 6px;
+  letter-spacing: 2px;
+  color: var(--color-secundary);
+  font-family: 'Lexend', sans-serif;
+  text-align: center;
 }
-
-/* ===== TITLE ===== */
 
 .register-title {
-  font-family: 'Gloock', serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 28px;
   text-align: center;
   margin-bottom: 30px;
+  font-weight: 500;
 }
-
-/* ===== FORM ===== */
 
 .register-form {
   display: flex;
   flex-direction: column;
+  max-width: 280px;
+  margin: 0 auto;
+
 }
 
 .register-field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .register-label {
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 6px;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--color-triary);
+  font-weight: 600;
 }
 
 .register-input {
   padding: 10px;
-  border: 1px solid #8f8f8f;
+  border: 1px solid #b4b3b3;
   background: transparent;
   font-size: 14px;
+  border-radius: 8px;
 }
 
 .register-input:focus {
@@ -944,8 +949,9 @@ html {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 20px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .register-terms-text {
@@ -956,12 +962,12 @@ html {
 
 .register-button {
   padding: 12px;
-  border: 1px solid #000;
-  background-color: #d6b1a6;
-  border-radius: 8px;
-  font-size: 15px;
+  background-color: #F2D1C9;
+  border-radius: 12px;
+  font-size: 17px;
   cursor: pointer;
   transition: 0.3s;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .register-button:hover {
