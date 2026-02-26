@@ -993,9 +993,10 @@ html {
 
 .glowme-logo {
   font-family: "Gloock", serif;
-  font-size: 34px;
+  font-size: 33px;
   letter-spacing: 2px;
   font-weight: 300;
+  margin: 0;
 }
 
 .glowme-slogan {
@@ -1004,8 +1005,8 @@ html {
   color: var(--color-secundary);
   letter-spacing: 2px;
   text-align: center;
+  transform: translateY(-4px);
 }
-
 
 .glowme-header-center {
   position: relative;
@@ -1014,14 +1015,15 @@ html {
 .glowme-search-bar {
   width: 540px; /* aumentei o tamanho do search bar */
   padding: 12px 35px 12px 12px;
-  border-radius: 6px;
+  border-radius: 9px;
   border: 1px solid #ccc;
   font-family: "Lexend", sans-serif;
+  opacity: 0.7;
 }
 
 .glowme-search-icon {
   position: absolute;
-  right: 10px;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
   width: 16px;
