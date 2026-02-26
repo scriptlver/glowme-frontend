@@ -1040,3 +1040,15 @@ html {
   cursor: pointer;
 }
 
+.delivery-info {
+  width: 100%;
+  background-color: #D96685;
+  color: #ffffff;
+  text-align: center;
+  padding: 3px 8px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
