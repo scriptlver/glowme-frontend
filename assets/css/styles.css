@@ -980,8 +980,9 @@ html {
   align-items: center;
   justify-content: space-between;
 
-  padding: 18px 40px;
+  padding: 32px 120px; /* ↑ aumenta altura */
   background: #ffffff;
+  width: 100%;
 }
 
 
@@ -992,7 +993,7 @@ html {
 
 .glowme-logo {
   font-family: "Gloock", serif;
-  font-size: 28px;
+  font-size: 34px;
   letter-spacing: 2px;
   font-weight: 300;
 }
@@ -1011,8 +1012,8 @@ html {
 }
 
 .glowme-search-bar {
-  width: 320px;
-  padding: 8px 35px 8px 12px;
+  width: 540px; /* aumentei o tamanho do search bar */
+  padding: 12px 35px 12px 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-family: "Lexend", sans-serif;
