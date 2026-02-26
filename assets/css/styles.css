@@ -863,6 +863,10 @@ html {
   font-weight: 400;
 }
 
+#header-desktop-container {
+  display: none;
+}
+
 /* criar conta */
 
 .register-container {
@@ -1061,4 +1065,10 @@ html {
   .register-menu-icon {
     display: none !important;
   }
+
+  #header-desktop-container {
+    display: block;
+  }
+
+  
 }
