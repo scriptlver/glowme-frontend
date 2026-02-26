@@ -975,3 +975,65 @@ html {
   opacity: 0.8;
 }
 
+.glowme-header-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 40px;
+  background: #ffffff;
+}
+
+
+.glowme-header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.glowme-logo {
+  font-family: "Gloock", serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.glowme-slogan {
+  font-family: "Lexend", sans-serif;
+  font-size: 8px;
+  color: var(--color-secundary);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+.glowme-header-center {
+  position: relative;
+}
+
+.glowme-search-bar {
+  width: 320px;
+  padding: 8px 35px 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: "Lexend", sans-serif;
+}
+
+.glowme-search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+}
+
+
+.glowme-header-right {
+  display: flex;
+  gap: 18px;
+}
+
+.glowme-header-icon {
+  width: 20px;
+  cursor: pointer;
+}
+
