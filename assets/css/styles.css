@@ -960,9 +960,86 @@ html {
   cursor: pointer;
 }
 
-/* botão (criar conta)*/
+/* login */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px 25px;
+}
 
-.register-button {
+.login-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.login-menu-icon {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.login-logo {
+  font-family: "Gloock", serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.login-logo-slogan {
+  display: block;
+  font-size: 6px;
+  letter-spacing: 2px;
+  color: var(--color-secundary);
+  font-family: "Lexend", sans-serif;
+  text-align: center;
+}
+
+.login-title {
+  font-family: "Kapakana", sans-serif;
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.login-label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--color-triary);
+  font-weight: 600;
+}
+
+.login-input {
+  padding: 10px;
+  border: 1px solid #b4b3b3;
+  background: transparent;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.login-input:focus {
+  border-color: #000;
+  outline: none;
+}
+
+.login-button {
   padding: 12px;
   background-color: #f2d1c9;
   border-radius: 12px;
@@ -973,10 +1050,11 @@ html {
   font-family: "Cormorant Garamond", serif;
 }
 
-.register-button:hover {
+.login-button:hover {
   opacity: 0.8;
 }
 
+/* header desktop */
 .glowme-header-desktop {
   display: flex;
   align-items: center;
@@ -1041,6 +1119,7 @@ html {
   cursor: pointer;
 }
 
+/* o frete gratis */
 .delivery-info {
   width: 100%;
   background-color: #d96685;

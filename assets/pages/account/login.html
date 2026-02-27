@@ -7,59 +7,41 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
 
-  <body class="register-page">
+  <body class="login-page">
     <div id="header-desktop-container"></div>
     <div id="menu-mobile-container"></div>
-    <div class="register-container">
-      <header class="register-header">
+    <div class="login-container">
+      <header class="login-header">
         <img
           src="/assets/img/icons/menu.png"
           alt="Menu"
           class="register-menu-icon"
         />
 
-        <h1 class="register-logo">GLOWME</h1>
+        <h1 class="login-logo">GLOWME</h1>
 
-        <span class="register-logo-slogan">Sua beleza, seu brilho</span>
+        <span class="login-logo-slogan">Sua beleza, seu brilho</span>
       </header>
 
-      <h2 class="register-title">Criar conta</h2>
+      <h2 class="login-title">Login</h2>
 
-      <form class="register-form">
-        <div class="register-field">
-          <label for="register-name" class="register-label">Nome</label>
-          <input type="text" id="register-name" class="register-input" />
+      <form class="login-form">
+        <div class="login-field">
+          <label for="login-email" class="login-label">Email</label>
+          <input type="email" id="login-email" class="login-input" />
         </div>
 
-        <div class="register-field">
-          <label for="register-email" class="register-label">Email</label>
-          <input type="email" id="register-email" class="register-input" />
-        </div>
-
-        <div class="register-field">
-          <label for="register-password" class="register-label">Senha</label>
+        <div class="login-field">
+          <label for="login-password" class="login-label">Senha</label>
           <input
             type="password"
-            id="register-password"
-            class="register-input"
+            id="login-password"
+            class="login-input"
           />
         </div>
 
-        <div class="register-field">
-          <label for="register-confirm" class="register-label">
-            Repita a sua senha
-          </label>
-          <input type="password" id="register-confirm" class="register-input" />
-        </div>
-
-        <div class="register-terms">
-          <input type="checkbox" id="register-terms-checkbox" />
-          <label for="register-terms-checkbox" class="register-terms-text">
-            Eu aceito os Termos de Uso
-          </label>
-        </div>
-
-        <button type="submit" class="register-button">Criar conta</button>
+        <button type="submit" class="login-button">Entrar</button>
+        
       </form>
     </div>
     <script src="/assets/js/menu-desktop.js"></script>
