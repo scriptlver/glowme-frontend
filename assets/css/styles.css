@@ -1054,6 +1054,27 @@ html {
   opacity: 0.8;
 }
 
+.login-register {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #8b857f;
+  text-align: center;
+}
+
+.login-register a {
+  color: #6f5544;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  margin-left: 4px;
+  transition: 0.3s ease;
+}
+
+.login-register a:hover {
+  color: #8a6b57;
+  text-decoration: underline;
+}
+
 /* header desktop */
 .glowme-header-desktop {
   display: flex;
@@ -1146,9 +1167,46 @@ html {
     display: none !important;
   }
 
+  .login-logo, .login-logo-slogan, .login-menu-icon{
+    display: none !important;
+  }
+
+  .login-container {
+    max-width: 440px;
+    padding: 56px 44px;
+  }
+
+  .login-title {
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+  }
+
+  .login-field {
+    margin-bottom: 20px;
+  }
+
+  .login-label {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .login-input {
+    font-size: 1.05rem;
+    padding: 14px 18px;
+  }
+
+  .login-button {
+    font-size: 1.1rem;
+    padding: 14px;
+    margin-top: 8px;
+  }
+
+  .login-register {
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+
   #header-desktop-container {
     display: block;
   }
-
-  
 }
