@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login — GLOWME</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+
+  <body class="register-page">
+    <div id="header-desktop-container"></div>
+    <div id="menu-mobile-container"></div>
+    <div class="register-container">
+      <header class="register-header">
+        <img
+          src="/assets/img/icons/menu.png"
+          alt="Menu"
+          class="register-menu-icon"
+        />
+
+        <h1 class="register-logo">GLOWME</h1>
+
+        <span class="register-logo-slogan">Sua beleza, seu brilho</span>
+      </header>
+
+      <h2 class="register-title">Criar conta</h2>
+
+      <form class="register-form">
+        <div class="register-field">
+          <label for="register-name" class="register-label">Nome</label>
+          <input type="text" id="register-name" class="register-input" />
+        </div>
+
+        <div class="register-field">
+          <label for="register-email" class="register-label">Email</label>
+          <input type="email" id="register-email" class="register-input" />
+        </div>
+
+        <div class="register-field">
+          <label for="register-password" class="register-label">Senha</label>
+          <input
+            type="password"
+            id="register-password"
+            class="register-input"
+          />
+        </div>
+
+        <div class="register-field">
+          <label for="register-confirm" class="register-label">
+            Repita a sua senha
+          </label>
+          <input type="password" id="register-confirm" class="register-input" />
+        </div>
+
+        <div class="register-terms">
+          <input type="checkbox" id="register-terms-checkbox" />
+          <label for="register-terms-checkbox" class="register-terms-text">
+            Eu aceito os Termos de Uso
+          </label>
+        </div>
+
+        <button type="submit" class="register-button">Criar conta</button>
+      </form>
+    </div>
+    <script src="/assets/js/menu-desktop.js"></script>
+    <script src="/assets/js/pages/create-account.js"></script>
+    <script src="/assets/js/menu-mobile.js"></script>
+  </body>
+</html>
