@@ -1,4 +1,4 @@
-# 💖 GLOWME website 💖
+# 💖 GLOWME frontend 💖
 
 olá, seja bem-vindo(a)! ✨
 
